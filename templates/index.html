@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistem Wajah</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #4361ee, #3a0ca3);
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+      }
+
+      .container {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        max-width: 500px;
+        width: 90%;
+      }
+
+      h1 {
+        margin-bottom: 30px;
+        font-size: 2.5rem;
+      }
+
+      .btn {
+        display: block;
+        background: white;
+        color: #4361ee;
+        text-decoration: none;
+        padding: 15px 25px;
+        margin: 20px auto;
+        border-radius: 50px;
+        font-weight: bold;
+        font-size: 1.1rem;
+        transition: all 0.3s;
+        width: 80%;
+        max-width: 250px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+      }
+
+      .logo {
+        width: 100px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- <img src="https://via.placeholder.com/100" alt="Logo" class="logo" /> -->
+      <h1>Sistem Wajah</h1>
+      <a href="{{ url_for('register_page') }}" class="btn">Registrasi Wajah</a>
+      <a href="{{ url_for('attendance_page') }}" class="btn btn-secondary"
+        >Presensi Wajah</a
+      >
+    </div>
+  </body>
+</html>
